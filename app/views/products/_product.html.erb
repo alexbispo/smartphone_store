@@ -13,5 +13,10 @@
   <%= product.release_year %>
 </p>
 
+<p>
+  <strong>Last Sell:</strong>
+  <%= product.last_sell.date.strftime("%d/%m/%Y") %>
+</p>
+
 <h4>Sells</h4>
 <%= render partial: "sells/sell", collection: product.sells, cached: true %>
